@@ -1,0 +1,20 @@
+{
+  "name": "creactiva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "git add -A && git commit -m \"Generando mejoras y cambios\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreActiva/Creactiva-CreActivaTeam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CreActiva/Creactiva-CreActivaTeam/issues"
+  },
+  "homepage": "https://github.com/CreActiva/Creactiva-CreActivaTeam#readme"
+}
