@@ -3805,7 +3805,7 @@ aside .latest-post li figure {width: 75px;}
 .color-3 {background-color: #ef3158;}
 .color-4 {background-color: #6b0990;}
 .color-5 {background-color: #4c0990;}
-.color-6 {background-color: #1b3194;}
+.color-6 {background-color: #000;}
 
 /* home - classic web agency */
 .after-before-separator:before, .after-before-separator:after {width: 35px; margin: 0 15px; height: 1px; background: rgba(255,255,255,.2); content: ""; display: inline-block; vertical-align: super;}
