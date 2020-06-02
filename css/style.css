@@ -62,6 +62,15 @@ Table of contents
   src: url('../fonts/helvetica/HelveticaNeueLight.eot?') format('embedded-opentype'), url('../fonts/helvetica/HelveticaNeueLight.woff2') format('woff2'), url('../fonts/helvetica/HelveticaNeueLight.ttf') format('truetype'), url('../fonts/helvetica/HelveticaNeueLight.svg#vtks_sonhoregular') format('svg');
 }
 
+li {
+  list-style: none;
+  padding-bottom: 0.8rem;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 
 /* ===================================
     Reset
@@ -327,6 +336,10 @@ h6 {
 
 
 /* text color */
+
+.text-orange {
+  color: #f26521;
+}
 
 .text-white-2,
 .btn.text-white-2 {
