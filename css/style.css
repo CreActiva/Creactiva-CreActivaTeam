@@ -67,6 +67,10 @@ li {
   padding-bottom: 0.8rem;
 }
 
+li:last-child {
+  padding-bottom: 0rem;
+}
+
 .text-shadow {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -1075,7 +1079,7 @@ a.text-very-light-gray-hover:hover {
   background-color: #fafafa
 }
 
-.bg-deep-pink {
+.bg-primary {
   background-color: #ff214f;
 }
 
@@ -1113,7 +1117,7 @@ a.text-very-light-gray-hover:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.bg-deep-pink-opacity {
+.bg-primary-opacity {
   background-color: rgba(255, 33, 79, 0.85);
 }
 
