@@ -43,24 +43,6 @@
 
   <!-- title -->
   <title>Contacto | Creactivateam</title>
-  <!-- smt JS -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script type="text/javascript">
-    function sendEmail(){
-      Email.send({
-    Host : "smtp.gmail.com",
-    Username : "proyectoscreactiva@gmail.com",
-    Password : "8D28j78uBI8VTymmA4so",
-    To : 'proyectoscreactiva@gmail.com',
-    From : "proyectoscreactiva@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-    }).then(
-    message => alert(message)
-    );
-    }
-  </script>
-  <!-- smt JS end -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
@@ -171,11 +153,11 @@ Nos gusta llevarle a las personas buenas ideas y eso lo hacemos a través de las
         <div class="col-12 col-lg-6 md-margin-30px-bottom wow fadeInLeft">
           <div class="padding-fifteen-all  border-radius-6 lg-padding-seven-all sm-padding-30px-all h-100">
             <span class="text-extra-dark-gray alt-font text-large font-weight-600 margin-25px-bottom d-block">¡Contáctanos!</span>
-            <form id="contact-form" action="javascript:void(0)" method="post">
+            <form id="contact-form">
               <div>
                 <div id="success-contact-form" class="mx-0"></div>
                 <input type="text" name="name" id="name" placeholder="Nombre*" class="border-radius-4 bg-white medium-input">
-                <input type="text" name="email" id="email" placeholder="Email*" class="border-radius-4 bg-white medium-input">
+                <input type="text" name="email" id="email" placeholder="E-mail*" class="border-radius-4 bg-white medium-input">
                 <input type="text" name="subject" id="subject" placeholder="Asunto" class="border-radius-4 bg-white medium-input">
                 <textarea name="comment" id="comment" placeholder="Mensaje" rows="5" class="border-radius-4 bg-white medium-textarea"></textarea>
                 <button id="contact-us-button" type="submit" class="btn btn-small btn-primary">Enviar</button>
@@ -348,8 +330,6 @@ Nos gusta llevarle a las personas buenas ideas y eso lo hacemos a través de las
   <!-- retina -->
   <script type="text/javascript" src="js/retina.min.js"></script>
   <!-- revolution -->
-  <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
-  <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
   <!-- revolution slider extensions (load below extensions JS files only on local file systems to make the slider work! The following part can be removed on server for on demand loading) -->
   <!--<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
@@ -362,6 +342,35 @@ Nos gusta llevarle a las personas buenas ideas y eso lo hacemos a través de las
         <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>-->
   <!-- setting -->
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    var form = document.getElementById("contact-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var subject = document.getElementById("subject").value;
+      var comment = document.getElementById("comment").value;
+      /*Envio de email*/
+      Email.send({
+        Host: "creactivateam.com",
+        Username: "info@creactivateam.com",
+        Password: "A8Pt;i0f(Q6p",
+        To: 'info@creactivateam.com',
+        From: "info@creactivateam.com",
+        Subject: "Creactiva Team | Contacto",
+        Body: `
+        Nombre: ${name}. <br>
+        Email: ${email}. <br>
+        Tema: ${subject}. <br>
+        Comenario: ${comment}
+        `
+      }).then(
+        message => console.log(message)
+      );
+    });
+    /*==============*/
+  </script>
 </body>
 
 </html>
