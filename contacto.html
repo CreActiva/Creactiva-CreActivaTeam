@@ -43,6 +43,24 @@
 
   <!-- title -->
   <title>Contacto | Creactivateam</title>
+  <!-- smt JS -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+    function sendEmail(){
+      Email.send({
+    Host : "smtp.gmail.com",
+    Username : "proyectoscreactiva@gmail.com",
+    Password : "8D28j78uBI8VTymmA4so",
+    To : 'proyectoscreactiva@gmail.com',
+    From : "proyectoscreactiva@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+    }
+  </script>
+  <!-- smt JS end -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
@@ -157,7 +175,7 @@ Nos gusta llevarle a las personas buenas ideas y eso lo hacemos a través de las
               <div>
                 <div id="success-contact-form" class="mx-0"></div>
                 <input type="text" name="name" id="name" placeholder="Nombre*" class="border-radius-4 bg-white medium-input">
-                <input type="text" name="email" id="email" placeholder="E-mail*" class="border-radius-4 bg-white medium-input">
+                <input type="text" name="email" id="email" placeholder="Email*" class="border-radius-4 bg-white medium-input">
                 <input type="text" name="subject" id="subject" placeholder="Asunto" class="border-radius-4 bg-white medium-input">
                 <textarea name="comment" id="comment" placeholder="Mensaje" rows="5" class="border-radius-4 bg-white medium-textarea"></textarea>
                 <button id="contact-us-button" type="submit" class="btn btn-small btn-primary">Enviar</button>
